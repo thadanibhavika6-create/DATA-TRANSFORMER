@@ -2,161 +2,241 @@
 
 <div align="center">
 
-<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=26&duration=3000&pause=1000&color=36BCF7&center=true&vCenter=true&width=700&lines=SQL+Data+Transformer+%F0%9F%97%84%EF%B8%8F;17+Queries+%7C+3+Tables+%7C+1+Database;Joins+%E2%80%A2+Subqueries+%E2%80%A2+Window+Functions;Learn+SQL+by+doing+%F0%9F%9A%80" alt="Typing SVG" />
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0f3d3b,100:2f9e94&height=200&section=header&text=SQL%20DATA%20TRANSFORMER&fontSize=40&fontColor=ffffff&animation=fadeIn&fontAlignY=38&desc=Joins%20%7C%20Subqueries%20%7C%20Date%20%26%20String%20Functions%20%7C%20Window%20Functions&descAlignY=58&descSize=18" width="100%"/>
 
-![SQL](https://img.shields.io/badge/Language-SQL-blue?style=for-the-badge&logo=postgresql&logoColor=white)
-![Database](https://img.shields.io/badge/Database-PostgreSQL-336791?style=for-the-badge&logo=postgresql&logoColor=white)
+<img src="https://readme-typing-svg.demolab.com/?lines=Customers+%E2%86%92+Orders+relational+design;17+queries+covering+core+SQL+concepts;Joins%2C+subqueries+%26+window+functions;Beginner-friendly+and+portfolio-ready&font=Fira+Code&center=true&width=650&height=45&color=2F9E94&vCenter=true&size=22&pause=1200"/>
+
+<br/>
+
+![SQL](https://img.shields.io/badge/SQL-PostgreSQL-336791?style=for-the-badge&logo=postgresql&logoColor=white)
+![Status](https://img.shields.io/badge/Status-Completed-brightgreen?style=for-the-badge)
 ![Queries](https://img.shields.io/badge/Queries-17-success?style=for-the-badge)
 ![Level](https://img.shields.io/badge/Level-Beginner-orange?style=for-the-badge)
+
+**🔴 [Open the live query explorer →](https://claude.ai/artifact/N42gAcnUyBDbDi3VDrKdNr)**
+<br/><sub>Click any of the 17 queries to see its SQL and result on the sample database, all in one page.</sub>
 
 </div>
 
 ---
 
-## 📖 About
+## 📌 Project Overview
 
-A beginner-friendly SQL project with a small e-commerce style database (**Customers**, **Orders**, **Employees**) and **17 queries** covering joins, subqueries, date and string functions, window functions and CASE logic.
+This project builds a small **e-commerce style database** with **Customers, Orders,** and **Employees** tables, then answers real business questions with 17 SQL queries.
 
-📂 Full script: [`Data Transfomer.sql`](./Data%20Transfomer.sql)
+It works as a practice sheet and a quick reference for **table design**, **joins**, **subqueries**, **date and string functions**, **window functions**, and **CASE logic**.
 
----
+<br/>
 
-## 🧱 Tables Used
+<div align="center">
+<img src="https://capsule-render.vercel.app/api?type=rect&color=0:0f3d3b,100:2f9e94&height=3&section=header" width="100%"/>
+</div>
 
-| Table | Purpose |
-|-------|---------|
-| 👥 `Customers_New` | Customer name, email and registration date |
-| 🛒 `Orders_New` | Orders linked to customers (Foreign Key) |
-| 💼 `Employees_New` | Employee department, hire date and salary |
+## 🗂️ Database Schema
 
----
+### 1️⃣ `Customers_New`
+| Column | Type | Description |
+|---|---|---|
+| CustomerID | INT (PK) | Unique ID for each customer |
+| FirstName | VARCHAR(50) | Customer's first name |
+| LastName | VARCHAR(50) | Customer's last name |
+| Email | VARCHAR(100) | Contact email |
+| RegistrationDate | DATE | Date the customer registered |
+
+### 2️⃣ `Orders_New`
+| Column | Type | Description |
+|---|---|---|
+| OrderID | INT (PK) | Unique ID for each order |
+| CustomerID | INT (FK) | References `Customers_New(CustomerID)` |
+| OrderDate | DATE | Date the order was placed |
+| TotalAmount | DECIMAL(10,2) | Order value |
+
+### 3️⃣ `Employees_New`
+| Column | Type | Description |
+|---|---|---|
+| EmployeeID | INT (PK) | Unique ID for each employee |
+| FirstName | VARCHAR(50) | Employee's first name |
+| LastName | VARCHAR(50) | Employee's last name |
+| Department | VARCHAR(50) | Department name |
+| HireDate | DATE | Date of joining |
+| Salary | DECIMAL(10,2) | Salary amount |
+
+**Relationships**
+```
+Customers_New 1───N Orders_New
+Employees_New (standalone table)
+```
+
+<br/>
+
+<div align="center">
+<img src="https://capsule-render.vercel.app/api?type=rect&color=0:0f3d3b,100:2f9e94&height=3&section=header" width="100%"/>
+</div>
+
+## ⚙️ Features / Operations Covered
+
+<table>
+<tr>
+<td width="50%" valign="top">
+
+**🔹 Joins**
+- `INNER JOIN`: orders with customer details
+- `LEFT JOIN`: all customers and their orders
+- `RIGHT JOIN`: all orders and their customers
+- `FULL OUTER JOIN`: everything, matched or not
+
+</td>
+<td width="50%" valign="top">
+
+**🔹 Subqueries**
+- Orders above the average order amount
+- Employees above the average salary
+
+</td>
+</tr>
+<tr>
+<td width="50%" valign="top">
+
+**🔹 Date Functions**
+- `EXTRACT` year and month
+- Days between order date and today
+- `TO_CHAR` for `DD-Mon-YYYY` format
+
+</td>
+<td width="50%" valign="top">
+
+**🔹 String Functions**
+- `CONCAT` for full name
+- `REPLACE` part of a string
+- `UPPER` and `LOWER` case
+- `TRIM` extra spaces
+
+</td>
+</tr>
+<tr>
+<td width="50%" valign="top">
+
+**🔹 Window Functions**
+- Running total with `SUM() OVER`
+- Order ranking with `RANK()`
+
+</td>
+<td width="50%" valign="top">
+
+**🔹 CASE Statements**
+- Discount tier from order amount
+- Salary category: High / Medium / Low
+
+</td>
+</tr>
+</table>
+
+<br/>
+
+<div align="center">
+<img src="https://capsule-render.vercel.app/api?type=rect&color=0:0f3d3b,100:2f9e94&height=3&section=header" width="100%"/>
+</div>
 
 ## 🔗 Query Index
 
-> 👆 Click any query to jump straight to it.
+| # | Query | Concept |
+|:-:|---|---|
+| 1 | [INNER JOIN](https://claude.ai/artifact/N42gAcnUyBDbDi3VDrKdNr#q1) | Joins |
+| 2 | [LEFT JOIN](https://claude.ai/artifact/N42gAcnUyBDbDi3VDrKdNr#q2) | Joins |
+| 3 | [RIGHT JOIN](https://claude.ai/artifact/N42gAcnUyBDbDi3VDrKdNr#q3) | Joins |
+| 4 | [FULL OUTER JOIN](https://claude.ai/artifact/N42gAcnUyBDbDi3VDrKdNr#q4) | Joins |
+| 5 | [Orders above average](https://claude.ai/artifact/N42gAcnUyBDbDi3VDrKdNr#q5) | Subquery |
+| 6 | [Employees above average salary](https://claude.ai/artifact/N42gAcnUyBDbDi3VDrKdNr#q6) | Subquery |
+| 7 | [Extract year and month](https://claude.ai/artifact/N42gAcnUyBDbDi3VDrKdNr#q7) | Date |
+| 8 | [Days since order](https://claude.ai/artifact/N42gAcnUyBDbDi3VDrKdNr#q8) | Date |
+| 9 | [Format date](https://claude.ai/artifact/N42gAcnUyBDbDi3VDrKdNr#q9) | Date |
+| 10 | [Full name](https://claude.ai/artifact/N42gAcnUyBDbDi3VDrKdNr#q10) | String |
+| 11 | [Replace text](https://claude.ai/artifact/N42gAcnUyBDbDi3VDrKdNr#q11) | String |
+| 12 | [Upper and lower case](https://claude.ai/artifact/N42gAcnUyBDbDi3VDrKdNr#q12) | String |
+| 13 | [Trim spaces](https://claude.ai/artifact/N42gAcnUyBDbDi3VDrKdNr#q13) | String |
+| 14 | [Running total](https://claude.ai/artifact/N42gAcnUyBDbDi3VDrKdNr#q14) | Window |
+| 15 | [Rank orders](https://claude.ai/artifact/N42gAcnUyBDbDi3VDrKdNr#q15) | Window |
+| 16 | [Discount by amount](https://claude.ai/artifact/N42gAcnUyBDbDi3VDrKdNr#q16) | CASE |
+| 17 | [Salary category](https://claude.ai/artifact/N42gAcnUyBDbDi3VDrKdNr#q17) | CASE |
 
-### 🔀 Joins
-- [1️⃣ INNER JOIN](#1-inner-join)
-- [2️⃣ LEFT JOIN](#2-left-join)
-- [3️⃣ RIGHT JOIN](#3-right-join)
-- [4️⃣ FULL OUTER JOIN](#4-full-outer-join)
+<br/>
 
-### 🧩 Subqueries
-- [5️⃣ Orders above average amount](#5-orders-above-average-amount)
-- [6️⃣ Employees above average salary](#6-employees-above-average-salary)
+## 🛠️ Tech Stack
 
-### 📅 Date Functions
-- [7️⃣ Extract year and month](#7-extract-year-and-month)
-- [8️⃣ Days difference from today](#8-days-difference-from-today)
-- [9️⃣ Format date (DD-Mon-YYYY)](#9-format-date)
+![PostgreSQL](https://img.shields.io/badge/PostgreSQL-336791?style=flat-square&logo=postgresql&logoColor=white)
+![pgAdmin](https://img.shields.io/badge/pgAdmin-336791?style=flat-square&logo=postgresql&logoColor=white)
+![MySQL](https://img.shields.io/badge/MySQL_compatible*-4479A1?style=flat-square&logo=mysql&logoColor=white)
 
-### 🔤 String Functions
-- [🔟 Concatenate full name](#10-concatenate-full-name)
-- [1️⃣1️⃣ Replace text](#11-replace-text)
-- [1️⃣2️⃣ Upper and lower case](#12-upper-and-lower-case)
-- [1️⃣3️⃣ Trim spaces](#13-trim-spaces)
+> ⚠️ **Note:** `TO_CHAR(...)`, `EXTRACT(...)`, and `CURRENT_DATE - date` are PostgreSQL syntax.
+> MySQL uses `DATE_FORMAT(...)` and `DATEDIFF(...)`, and it has no `FULL OUTER JOIN`.
 
-### 📈 Window Functions
-- [1️⃣4️⃣ Running total](#14-running-total)
-- [1️⃣5️⃣ Rank orders](#15-rank-orders)
+<br/>
 
-### 🎯 CASE Statements
-- [1️⃣6️⃣ Discount based on amount](#16-discount-based-on-amount)
-- [1️⃣7️⃣ Salary category](#17-salary-category)
+## ▶️ How to Run
 
----
+```bash
+1. Open your SQL client (pgAdmin / DBeaver / psql)
+2. CREATE DATABASE data_transformer;
+3. Run "Data Transfomer.sql" (it creates the tables, inserts data
+   and runs all 17 queries)
+4. Check the results in your SQL client's output panel
+```
 
-## 🔀 Joins
+Prefer zero setup? Open the **[live query explorer](https://claude.ai/artifact/N42gAcnUyBDbDi3VDrKdNr)** and browse every query instantly.
 
-### 1. INNER JOIN
-Shows all orders along with the details of the customers who placed them. Only matching records appear. &nbsp; [⬆ Back to index](#-query-index)
+<br/>
 
-### 2. LEFT JOIN
-Shows every customer and their orders, if any. Customers without orders still appear. &nbsp; [⬆ Back to index](#-query-index)
+<div align="center">
+<img src="https://capsule-render.vercel.app/api?type=rect&color=0:0f3d3b,100:2f9e94&height=3&section=header" width="100%"/>
+</div>
 
-### 3. RIGHT JOIN
-Shows every order and its customer, if any. Orders without a matching customer still appear. &nbsp; [⬆ Back to index](#-query-index)
+## 🧠 What You Will Learn
 
-### 4. FULL OUTER JOIN
-Shows all customers and all orders, whether they match or not. &nbsp; [⬆ Back to index](#-query-index)
+- 🔑 Designing tables with primary and foreign keys
+- 🔀 Combining data from related tables with all four join types
+- 🧩 Filtering data dynamically with subqueries
+- 📅 Transforming dates and text with built-in functions
+- 📈 Running totals and rankings with window functions
+- 🎯 Adding business rules with CASE expressions
 
----
+<br/>
 
-## 🧩 Subqueries
+## 📁 File Structure
 
-### 5. Orders above average amount
-Finds customers whose order value is higher than the average order amount. &nbsp; [⬆ Back to index](#-query-index)
+```
+├── Data Transfomer.sql   # tables + sample data + 17 queries
+└── README.md             # project documentation (this file)
+```
 
-### 6. Employees above average salary
-Lists employees who earn more than the average salary. &nbsp; [⬆ Back to index](#-query-index)
+## 🚀 Future Improvements
 
----
+- [ ] Add more sample data for richer results
+- [ ] Add `GROUP BY` and `HAVING` aggregate queries
+- [ ] Add CTE (`WITH`) examples
+- [ ] Add views and stored procedures
+- [ ] Port date and string functions to MySQL / SQL Server
 
-## 📅 Date Functions
+<br/>
 
-### 7. Extract year and month
-Pulls the year and month out of `OrderDate` using `EXTRACT`. &nbsp; [⬆ Back to index](#-query-index)
+## 🖥️ Live Preview
 
-### 8. Days difference from today
-Calculates how many days have passed since each order date. &nbsp; [⬆ Back to index](#-query-index)
+Open the clickable query console and try all 17 queries yourself:
 
-### 9. Format date
-Converts the order date into a readable `DD-Mon-YYYY` format using `TO_CHAR`. &nbsp; [⬆ Back to index](#-query-index)
+**👉 [claude.ai/artifact/N42gAcnUyBDbDi3VDrKdNr](https://claude.ai/artifact/N42gAcnUyBDbDi3VDrKdNr)**
 
----
-
-## 🔤 String Functions
-
-### 10. Concatenate full name
-Joins first name and last name into one `FullName` column. &nbsp; [⬆ Back to index](#-query-index)
-
-### 11. Replace text
-Replaces `John` with `Jonathan` using `REPLACE`. &nbsp; [⬆ Back to index](#-query-index)
-
-### 12. Upper and lower case
-Shows first name in UPPERCASE and last name in lowercase. &nbsp; [⬆ Back to index](#-query-index)
-
-### 13. Trim spaces
-Removes extra spaces from the email field with `TRIM`. &nbsp; [⬆ Back to index](#-query-index)
-
----
-
-## 📈 Window Functions
-
-### 14. Running total
-Calculates a cumulative total of order amounts, ordered by date. &nbsp; [⬆ Back to index](#-query-index)
-
-### 15. Rank orders
-Ranks orders from highest to lowest amount using `RANK()`. &nbsp; [⬆ Back to index](#-query-index)
-
----
-
-## 🎯 CASE Statements
-
-### 16. Discount based on amount
-Assigns a discount tier: above 1000 gets 10% off, above 500 gets 5% off. &nbsp; [⬆ Back to index](#-query-index)
-
-### 17. Salary category
-Labels each employee's salary as High, Medium or Low. &nbsp; [⬆ Back to index](#-query-index)
-
----
-
-## 🚀 How to Run
-
-1. Install **PostgreSQL** and open any SQL client (pgAdmin, DBeaver or psql).
-2. Create a new database.
-3. Open `Data Transfomer.sql` and run it.
-
-> 💡 Queries use PostgreSQL syntax. For MySQL, some date functions and `FULL OUTER JOIN` need changes.
-
----
-
-## 👤 Author
-
-**Your Name** &nbsp;|&nbsp; 📧 your.email@example.com &nbsp;|&nbsp; [GitHub](https://github.com/your-username) &nbsp;|&nbsp; [LinkedIn](https://linkedin.com/in/your-profile)
+<br/>
 
 <div align="center">
 
-⭐ **Like this project? Give it a star!** ⭐
+### 👤 Author
+
+**Bhavika Thadani**
+📍 Ahmedabad
+
+Made with ❤️ to strengthen SQL fundamentals: joins, subqueries and window functions.
+
+⭐ **If you found this project useful, consider giving it a star!**
+
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:2f9e94,100:0f3d3b&height=100&section=footer" width="100%"/>
 
 </div>
