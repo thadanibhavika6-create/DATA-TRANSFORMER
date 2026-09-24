@@ -216,6 +216,12 @@ Employees_New (standalone table)
 
 <br/>
 
+## 🖥️ Live Preview
+
+Want to see all 17 queries in action? Use the **live query explorer** link at the top of this page, then click any query to see its SQL and result.
+
+<br/>
+
 <div align="center">
 
 ### 👤 Author
