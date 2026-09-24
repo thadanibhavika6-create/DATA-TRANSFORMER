@@ -141,23 +141,23 @@ Employees_New (standalone table)
 
 | # | Query | Concept |
 |:-:|---|---|
-| 1 | [INNER JOIN](https://claude.ai/artifact/N42gAcnUyBDbDi3VDrKdNr#q1) | Joins |
-| 2 | [LEFT JOIN](https://claude.ai/artifact/N42gAcnUyBDbDi3VDrKdNr#q2) | Joins |
-| 3 | [RIGHT JOIN](https://claude.ai/artifact/N42gAcnUyBDbDi3VDrKdNr#q3) | Joins |
-| 4 | [FULL OUTER JOIN](https://claude.ai/artifact/N42gAcnUyBDbDi3VDrKdNr#q4) | Joins |
-| 5 | [Orders above average](https://claude.ai/artifact/N42gAcnUyBDbDi3VDrKdNr#q5) | Subquery |
-| 6 | [Employees above average salary](https://claude.ai/artifact/N42gAcnUyBDbDi3VDrKdNr#q6) | Subquery |
-| 7 | [Extract year and month](https://claude.ai/artifact/N42gAcnUyBDbDi3VDrKdNr#q7) | Date |
-| 8 | [Days since order](https://claude.ai/artifact/N42gAcnUyBDbDi3VDrKdNr#q8) | Date |
-| 9 | [Format date](https://claude.ai/artifact/N42gAcnUyBDbDi3VDrKdNr#q9) | Date |
-| 10 | [Full name](https://claude.ai/artifact/N42gAcnUyBDbDi3VDrKdNr#q10) | String |
-| 11 | [Replace text](https://claude.ai/artifact/N42gAcnUyBDbDi3VDrKdNr#q11) | String |
-| 12 | [Upper and lower case](https://claude.ai/artifact/N42gAcnUyBDbDi3VDrKdNr#q12) | String |
-| 13 | [Trim spaces](https://claude.ai/artifact/N42gAcnUyBDbDi3VDrKdNr#q13) | String |
-| 14 | [Running total](https://claude.ai/artifact/N42gAcnUyBDbDi3VDrKdNr#q14) | Window |
-| 15 | [Rank orders](https://claude.ai/artifact/N42gAcnUyBDbDi3VDrKdNr#q15) | Window |
-| 16 | [Discount by amount](https://claude.ai/artifact/N42gAcnUyBDbDi3VDrKdNr#q16) | CASE |
-| 17 | [Salary category](https://claude.ai/artifact/N42gAcnUyBDbDi3VDrKdNr#q17) | CASE |
+| 1 | INNER JOIN | Joins |
+| 2 | LEFT JOIN | Joins |
+| 3 | RIGHT JOIN | Joins |
+| 4 | FULL OUTER JOIN | Joins |
+| 5 | Orders above average | Subquery |
+| 6 | Employees above average salary | Subquery |
+| 7 | Extract year and month | Date |
+| 8 | Days since order | Date |
+| 9 | Format date | Date |
+| 10 | Full name | String |
+| 11 | Replace text | String |
+| 12 | Upper and lower case | String |
+| 13 | Trim spaces | String |
+| 14 | Running total | Window |
+| 15 | Rank orders | Window |
+| 16 | Discount by amount | CASE |
+| 17 | Salary category | CASE |
 
 <br/>
 
@@ -181,8 +181,6 @@ Employees_New (standalone table)
    and runs all 17 queries)
 4. Check the results in your SQL client's output panel
 ```
-
-Prefer zero setup? Open the **[live query explorer](https://claude.ai/artifact/N42gAcnUyBDbDi3VDrKdNr)** and browse every query instantly.
 
 <br/>
 
@@ -215,14 +213,6 @@ Prefer zero setup? Open the **[live query explorer](https://claude.ai/artifact/N
 - [ ] Add CTE (`WITH`) examples
 - [ ] Add views and stored procedures
 - [ ] Port date and string functions to MySQL / SQL Server
-
-<br/>
-
-## 🖥️ Live Preview
-
-Open the clickable query console and try all 17 queries yourself:
-
-**👉 [claude.ai/artifact/N42gAcnUyBDbDi3VDrKdNr](https://claude.ai/artifact/N42gAcnUyBDbDi3VDrKdNr)**
 
 <br/>
 
