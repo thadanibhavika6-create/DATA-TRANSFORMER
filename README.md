@@ -217,6 +217,8 @@ Employees_New (standalone table)
 
 ## 🖥️ SAMPLE OUTPUT
 
+<img width="1408" height="768" alt="image_43592672 jpg" src="https://github.com/user-attachments/assets/ce07aa4a-1c87-411e-83a1-6cb033641632" />
+
 <br/>
 
 <div align="center">
