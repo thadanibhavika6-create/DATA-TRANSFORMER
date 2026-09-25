@@ -216,10 +216,7 @@ Employees_New (standalone table)
 
 <br/>
 
-## 🖥️ Live Preview
-
-Open the clickable query console and try all 17 queries yourself:
-👍sql-query-explorer%20(3)%20(2).html#q1
+## 🖥️ SAMPLE OUTPUT
 
 <br/>
 
