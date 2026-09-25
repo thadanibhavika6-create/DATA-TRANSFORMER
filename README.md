@@ -219,7 +219,7 @@ Employees_New (standalone table)
 ## 🖥️ Live Preview
 
 Open the clickable query console and try all 17 queries yourself:
-https://claude.ai/artifact/N42gAcnUyBDbDi3VDrKdNr
+👍sql-query-explorer%20(3)%20(2).html#q1
 
 <br/>
 
