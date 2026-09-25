@@ -13,7 +13,6 @@
 ![Queries](https://img.shields.io/badge/Queries-17-success?style=for-the-badge)
 ![Level](https://img.shields.io/badge/Level-Beginner-orange?style=for-the-badge)
 
-**🔴 [Open the live query explorer →](https://claude.ai/artifact/N42gAcnUyBDbDi3VDrKdNr)**
 <br/><sub>Click any of the 17 queries to see its SQL and result on the sample database, all in one page.</sub>
 
 </div>
